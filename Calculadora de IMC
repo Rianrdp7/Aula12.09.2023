@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class CalculadoraIMC{ 
+    public static void main(){
+        Scanner scanner = new Scanner(System.in);
+        
+        Float imc;
+        Float altura;
+        Float peso;
+        
+        System.out.println("Por favor, informe sua altura: ");
+        altura = scanner.nextFloat();
+        
+        System.out.println("Por favor, informe seu peso: ");
+        peso = scanner.nextFloat();
+        
+        imc = peso/(altura*altura);
+        System.out.println("Seu IMC é de: " + imc);
+        
+        if (imc <=18.5) { 
+            System.out.println("Abaixo do peso");}
+        if (imc >=18.6 && imc <= 24.9) {
+            System.out.println("Peso ideal");}
+        if (imc >=25 && imc <= 29.9) {
+            System.out.println("Levente acima do peso");} 
+        if (imc >=30 && imc <= 34.9) {
+            System.out.println("Obesidade grau I");} 
+        if (imc >=35 && imc <= 39.9) {
+            System.out.println("Obesidade grau II (SEVERA)");} 
+        if (imc >= 40) {
+            System.out.println("Obesidade grau III (MÓRBITA)");} 
+    }
+}
